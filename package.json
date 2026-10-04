@@ -1,0 +1,20 @@
+{
+  "name": "discord-voice-auto-messages",
+  "version": "5.0.0",
+  "description": "Private automatic messages while the linked account is in a selected voice category",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node --test test/*.test.js",
+    "check:mongodb": "node scripts/check-mongodb.js"
+  },
+  "dependencies": {
+    "discord.js-selfbot-v13": "3.7.1",
+    "express": "^4.21.2",
+    "mongodb": "6.21.0"
+  },
+  "engines": {
+    "node": ">=22.4.0"
+  }
+}

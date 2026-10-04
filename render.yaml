@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: two4-discord
+    runtime: docker
+    plan: 1c-2g
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    maxShutdownDelaySeconds: 20
+    autoDeploy: true
+    envVars:
+      - key: DISCORD_BOT_TOKEN
+        sync: false
+      - key: DISCORD_APPLICATION_ID
+        sync: false
+      - key: DISCORD_PUBLIC_KEY
+        sync: false
+      - key: TOKEN_ENCRYPTION_KEY
+        sync: false
+      - key: MONGODB_URI
+        sync: false
+      - key: MONGODB_DB_NAME
+        value: control
+      - key: NODE_ENV
+        value: production
